@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     REMOTE_USER = "ubuntu"
-    REMOTE_HOST = "52.91.212.170"
+    REMOTE_HOST = "13.222.29.245"
     SSH_KEY = credentials('student-portal-ssh') 
     IMAGE = "student-portal"
   }
