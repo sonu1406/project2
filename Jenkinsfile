@@ -9,12 +9,6 @@ pipeline {
   }
 
   stages {
-    stage('Clone Repo') {
-      steps {
-        git 'https://github.com/sonu1406/project2.git'
-      }
-    }
-
     stage('Build React App') {
       steps {
         dir('app') {
