@@ -28,7 +28,7 @@ pipeline {
       steps {
         sshagent(credentials: ['student-portal-ssh']) {
           sh """
-          ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << EOF
+          ssh -tt -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << EOF
             docker stop $IMAGE || true
             docker rm $IMAGE || true
             cd ~/student-portal
